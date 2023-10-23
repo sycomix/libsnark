@@ -13,7 +13,7 @@ HASH_LEN = 256
 HASH_BYTES = HASH_LEN // 8
 
 def gen_random_bytes(n):
-    return [random.randint(0, 255) for i in xrange(n)]
+    return [random.randint(0, 255) for _ in xrange(n)]
 
 def words_to_bytes(arr):
     return sum(([x >> 24, (x >> 16) & 0xff, (x >> 8) & 0xff, x & 0xff] for x in arr), [])
